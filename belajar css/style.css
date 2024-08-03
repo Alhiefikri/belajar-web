@@ -72,6 +72,7 @@ body{
     font: 16px/28px arial, sans-serif;
     background-color: #eaeaea;
     color: #333;
+    background-image: url(img/back.png);
 }
 
 .header{
@@ -86,4 +87,58 @@ body{
    display: inline-block; 
    margin-top: 20px;
    margin-right: 10px;
+}
+
+.header a {
+    text-decoration: none;
+    color: salmon;
+    padding: 3px;
+}
+
+.header a:hover {
+    background-color: lightskyblue;
+    color: white;
+}
+
+.hero{
+    height: 250px;
+    background-image: url(img/hero.jpg);
+    background-size: cover;
+    background-position: 0 -250px;
+    border-bottom: 5px solid lightskyblue;
+    border-top: 5px solid salmon;
+}
+
+.content{
+    padding: 20px;
+}
+
+.content h2{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.content .penulis {
+    font-size:  11px;
+    margin-top: -5px;
+}
+
+.content .penulis a {
+    color:  salmon;
+}
+
+.content p{
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+
+.footer {
+    background-color: #333;
+    padding: 10px;
+}
+
+.footer .copy {
+    color: #eaeaea;
+    text-align: center;
+    font-size: 12px;
 }
