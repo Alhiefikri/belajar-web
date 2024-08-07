@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="logo">
+        <img src="img/partner.png" alt="logo" class="logo-img" />
+        <h1 class="logo-title">ALHIE X</h1>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="#jasa">JASA</a></li>
+          <li><a href="mailto:alhiepedia@gmail.com">KONTAK</a></li>
+        </ul>
+      </nav>
+      <button class="btn-cta" onclick="redirInstagram()">Follow Saya</button>
+    </header>
+
+    <div class="container">
+      <div class="intro">
+        <p class="title">Hello, Alhie Fikri Here!</p>
+        <p class="description">Technology Influencer From Village</p>
+        <img src="img/alhie.jpg" alt="alhie fikri foto 1" class="img-foto" />
+      </div>
+    </div>
+    <div class="parallax">
+      <div class="tentang">
+        <p class="title">Saya Adalah Programmer</p>
+        <p class="description">Ngoding aja dulu, jagonya belakangan</p>
+        <div class="mt-10">
+          <button class="btn-cta" onclick="redirWhatsapp()">
+            Mari Kerja Sama
+          </button>
+        </div>
+      </div>
+      <div class="container" id="jasa">
+        <div class="card">
+          <div class="card-item">
+            <img src="img/24-hours.png" alt="icon 1" class="icon" />
+            <div class="card-title">Pelayanan Nonstop</div>
+            <p class="card-description">
+              Service 24 jam nonstop ketika anda membutuhkan bantuan
+            </p>
+          </div>
+          <div class="card-item">
+            <img src="img/hot-deal.png" alt="icon 2" class="icon" />
+            <div class="card-title">Saya Programmer Murah</div>
+            <p class="card-description">Jasa Paling Murah</p>
+          </div>
+          <div class="card-item">
+            <img src="img/rating.png" alt="icon 3" class="icon" />
+            <div class="card-title">832 Review</div>
+            <p class="card-description">
+              Client saya sangat senang dalam bekerja sama dengan saya.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p class="title">&copy; Alhie Fikri Website 2024</p>
+    </footer>
+  </body>
+
+  <script>
+    function redirInstagram() {
+      window.open("https://instagram.com/alhiefikri", "_blank");
+    }
+    function redirWhatsapp() {
+      window.open("https://wa.me/082190715067", "_blank");
+    }
+  </script>
+</html>
