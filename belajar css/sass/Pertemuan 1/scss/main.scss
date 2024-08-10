@@ -1,0 +1,44 @@
+//
+// .main,
+// footer {
+//   h1,
+//   p {
+//     letter-spacing: 1px;
+//   }
+// }
+
+// &
+// parent Selector
+// .main {
+//   .container & {
+//     background-color: lightblue;
+//   }
+
+//   .main-heading {
+//     font-size: 2em;
+//   }
+
+//   &:hover {
+//     background-color: salmon;
+//     cursor: pointer;
+//   }
+// }
+
+.main {
+  #{&}-heading {
+    font-size: 2rem;
+  }
+  #{&}-paragraph {
+    font-size: 1.4em;
+  }
+}
+
+.footer {
+  #{&}-heading {
+    font-size: 2em;
+  }
+
+  #{&}-paragraph {
+    font-size: 1.4em;
+  }
+}
