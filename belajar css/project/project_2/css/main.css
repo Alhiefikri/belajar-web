@@ -5,52 +5,43 @@
 
 body {
   font-family: "Montserrat", sans-serif;
-  overflow-x: hidden;
+  overflow: hidden;
 }
 
-/* Navbar */
-nav {
+header nav {
   display: flex;
-  background-color: rgb(53, 175, 223);
+  background-color: rgb(53, 175, 255);
   justify-content: space-around;
-  /* padding: 20px 0; */
-  color: rgb(255, 255, 255);
+  color: white;
   align-items: center;
   height: 50px;
 }
-nav .logo {
+header nav .logo {
   font-family: "Pacifico", cursive;
-  letter-spacing: 3px;
+  letter-spacing: 5px;
 }
-
-nav ul {
+header nav ul {
   display: flex;
+  justify-content: space-between;
   list-style: none;
   width: 40%;
-  justify-content: space-between;
 }
-
-nav ul li a {
-  color: rgb(255, 255, 255);
+header nav ul li a {
+  color: white;
   text-decoration: none;
   font-size: 0.8em;
 }
-
-nav ul li a:hover {
-  color: rgb(255, 255, 255);
+header nav ul li a:hover {
+  background-color: white;
+  color: black;
 }
-
-/* Hamburger Menu */
-
-.menu-toggle {
-  display: none;
+header .menu-togle {
   flex-direction: column;
   height: 20px;
   justify-content: space-between;
   position: relative;
 }
-
-.menu-toggle input {
+header .menu-togle input {
   position: absolute;
   width: 40px;
   height: 28px;
@@ -59,51 +50,40 @@ nav ul li a:hover {
   opacity: 0;
   z-index: 2;
 }
-.menu-toggle span {
+header .menu-togle span {
   display: block;
   width: 28px;
   height: 3px;
-  background-color: rgb(255, 255, 255);
-  border-radius: 3px;
+  background-color: white;
+  border: 3px;
   transition: all 0.5s;
 }
-
-/* Hamburger Menu Animation */
-.menu-toggle span:nth-child(2) {
+header .menu-togle span:nth-child(2) {
   transform-origin: 0 0;
 }
-
-.menu-toggle span:nth-child(4) {
+header .menu-togle span:nth-child(4) {
   transform-origin: 0 100%;
 }
-
-.menu-toggle input:checked ~ span:nth-child(2) {
+input:checked ~ header .menu-togle span:nth-child(2) {
   background-color: white;
-  transform: rotate(45deg) translate(-1px, -1px);
+  transform: rotate(-45deg) translate(-1px, -1px);
 }
-
-.menu-toggle input:checked ~ span:nth-child(4) {
+input:checked ~ header .menu-togle span:nth-child(4) {
   background-color: white;
   transform: rotate(-45deg) translate(-1px, 0);
 }
-
-.menu-toggle input:checked ~ span:nth-child(3) {
-  opacity: 0;
+input:checked ~ header .menu-togle span:nth-child(3) {
   transform: scale(0);
+  opacity: 0;
 }
 
-/* Responsive Breakpoint */
-
-/* ukuran tablet */
 @media screen and (max-width: 768px) {
   nav ul {
     width: 50%;
   }
 }
-
-/* ukuran Mobile */
 @media screen and (max-width: 576px) {
-  .menu-toggle {
+  .menu-togle {
     display: flex;
   }
   nav ul {
@@ -121,9 +101,8 @@ nav ul li a:hover {
     transition: all 1s;
     opacity: 0;
   }
-
   nav ul.slide {
     opacity: 1;
     transform: translateX(0);
   }
-}
+}/*# sourceMappingURL=main.css.map */

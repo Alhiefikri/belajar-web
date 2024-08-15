@@ -1,0 +1,118 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+}
+
+header {
+  nav {
+    display: flex;
+    background-color: rgb(53, 175, 255);
+    justify-content: space-around;
+    color: white;
+    align-items: center;
+    height: 50px;
+    .logo {
+      font-family: "Pacifico", cursive;
+      letter-spacing: 5px;
+    }
+    ul {
+      display: flex;
+      justify-content: space-between;
+      list-style: none;
+      width: 40%;
+      li a {
+        color: white;
+        text-decoration: none;
+        font-size: 0.8em;
+        &:hover {
+          background-color: white;
+          color: black;
+        }
+      }
+    }
+  }
+  // hamburger menu
+  .menu-togle {
+    flex-direction: column;
+    height: 20px;
+    justify-content: space-between;
+    position: relative;
+    input {
+      position: absolute;
+      width: 40px;
+      height: 28px;
+      left: -6px;
+      top: -3px;
+      opacity: 0;
+      z-index: 2;
+    }
+    span {
+      display: block;
+      width: 28px;
+      height: 3px;
+      background-color: white;
+      border: 3px;
+      transition: all 0.5s;
+
+      &:nth-child(2) {
+        transform-origin: 0 0;
+      }
+      &:nth-child(4) {
+        transform-origin: 0 100%;
+      }
+
+      input:checked ~ & {
+        &:nth-child(2) {
+          background-color: white;
+          transform: rotate(-45deg) translate(-1px, -1px);
+        }
+        &:nth-child(4) {
+          background-color: white;
+          transform: rotate(-45deg) translate(-1px, 0);
+        }
+        &:nth-child(3) {
+          transform: scale(0);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+// responsive breakpoint
+@media screen and (max-width: 768px) {
+  nav ul {
+    width: 50%;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .menu-togle {
+    display: flex;
+  }
+  nav ul {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 80%;
+    height: 100vh;
+    justify-content: space-evenly;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(53, 175, 223);
+    z-index: -1;
+    transform: translateX(100%);
+    transition: all 1s;
+    opacity: 0;
+
+    &.slide {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+}
