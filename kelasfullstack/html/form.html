@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form HTML</title>
+  </head>
+  <body>
+    <h1>Form Isian</h1>
+    <form action="\daftar" method="post">
+      <div>
+        <label for="name">Nama Lengkap</label>
+        <input type="text" name="name" id="" placeholder="Masukan Nama" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="" placeholder="Masukan Email" />
+      </div>
+      <div>
+        <label for="password">Passowrd</label>
+        <input
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Masukan Passowrd"
+        />
+      </div>
+      <div>
+        <label for="number">Nomor Hp</label>
+        <input
+          type="number"
+          name="number"
+          id="number"
+          placeholder="Masukan Nomor Hp"
+        />
+      </div>
+      <button type="button">Button Biasa</button>
+      <button type="submit">Button</button>
+      <input type="submit" value="Daftar" />
+      <hr />
+    </form>
+    <form action="\Daftar" method="get">
+      <h1>Makanan</h1>
+      <div>
+        <input type="radio" name="food" id="food" value="Tempe" checked />
+        <label for="tempe">Tempe</label>
+        <input type="radio" name="food" id="food" value="Tahu" />
+        <label for="tahu">Tahu</label>
+      </div>
+      <div>
+        <select name="toping" id="toping">
+          <option value="none">--Silahkan Pilih Toping---</option>
+          <option value="barbeque">Barbeque</option>
+          <option value="Mozarela">Mozarela</option>
+          <option value="cocopandan2">Coco Pandan</option>
+        </select>
+      </div>
+      <p>
+        <label for="catatan">Catatan</label>
+      </p>
+      <textarea name="catatan" id="catatan" rows="5" cols="50"></textarea>
+      <button type="submit">Kirim</button>
+    </form>
+
+    <hr />
+    <h1>Validasi</h1>
+    <form action="action" method="get">
+      <input
+        type="text"
+        name="nama"
+        id="nama"
+        required
+        minlength="2"
+        maxlength="5"
+      />
+      <input type="number" name="number" id="number" required min="2" max="5" />
+      <button>Kirim</button>
+    </form>
+  </body>
+</html>

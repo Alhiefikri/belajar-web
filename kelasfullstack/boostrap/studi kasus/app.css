@@ -1,0 +1,61 @@
+body {
+  background: #c2ded1;
+  font-family: "Nunito", sans-serif;
+}
+
+#navbar {
+  font-size: 1.5rem;
+  font-weight: 100;
+}
+#navbar .nav-link {
+  color: white;
+}
+
+#navbar .nav-link:hover {
+  color: #354259;
+}
+
+#navbar .navbar-brand {
+  color: #354259;
+  font-size: 1.5rem;
+}
+
+/* CSS untuk efek scroll pada navbar */
+.navbar.scrolled {
+  background-color: rgb(
+    148,
+    170,
+    159
+  ); /* Ubah latar belakang navbar saat di-scroll */
+  transition: background-color 0.3s; /* Transisi warna yang halus */
+}
+
+#title-head {
+  font-weight: 100;
+  font-size: 4rem;
+}
+
+.blurb h2 {
+  color: #354259;
+  font-weight: 100;
+  font-size: 2.5rem1;
+}
+
+.blurb p {
+  color: #3f4e4f;
+  font-weight: 100;
+  font-size: 1.125rem;
+  line-height: 2;
+}
+
+.content {
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+@media (max-width: 1200px) {
+  #title-head {
+    font-weight: 100;
+    font-size: 3rem1;
+  }
+}
