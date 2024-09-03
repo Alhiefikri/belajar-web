@@ -591,45 +591,58 @@
         <i class="bi bi-disc"></i>
       </div>
     </div>
+    <!-- Memuat Popper.js dari CDN untuk Bootstrap -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
       integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Memuat Bootstrap JavaScript dari CDN -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
       integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
       crossorigin="anonymous"
     ></script>
+
+    <!-- Memuat SimplyCountdown.js untuk hitung mundur -->
     <script src="Countdown/simplyCountdown.js"></script>
+
+    <!-- Inisialisasi SimplyCountdown -->
     <script>
       simplyCountdown(".simply-countdown", {
-        year: 2024, // required
-        month: 9, // required
-        day: 15, // required
-        hours: 8, // Default is 0 [0-23] integer
-        minutes: 0, // Default is 0 [0-59] integer
-        seconds: 0, // Default is 0 [0-59] integer
+        year: 2024, // Tahun target hitung mundur
+        month: 9, // Bulan target hitung mundur (September)
+        day: 15, // Hari target hitung mundur
+        hours: 8, // Jam target hitung mundur (08:00)
+        minutes: 0, // Menit target hitung mundur
+        seconds: 0, // Detik target hitung mundur
         words: {
           days: { singular: "hari", plural: "hari" },
           hours: { singular: "jam", plural: "jam" },
           minutes: { singular: "menit", plural: "menit" },
-          seconds: { singular: "detik", plural: "detik" }, // Perbaikan di sini
+          seconds: { singular: "detik", plural: "detik" }, // Kata untuk detik
         },
       });
     </script>
+
+    <!-- Menangani Overflow Menu saat Offcanvas Ditampilkan -->
     <script>
       const stickyTop = document.querySelector(".sticky-top");
       const offcanvas = document.querySelector(".offcanvas");
 
+      // Mengatur overflow menjadi visible ketika menu offcanvas ditampilkan
       offcanvas.addEventListener("show.bs.offcanvas", function () {
         stickyTop.style.overflow = "visible";
       });
 
+      // Mengatur overflow menjadi hidden ketika menu offcanvas disembunyikan
       offcanvas.addEventListener("hidden.bs.offcanvas", function () {
         stickyTop.style.overflow = "hidden";
       });
     </script>
+
+    <!-- Mengatur Audio dan Scroll -->
     <script>
       const rootElement = document.querySelector(":root");
       const audioIconWrapper = document.querySelector(".audio-icon-wrapper");
@@ -637,6 +650,7 @@
       const song = document.querySelector("#song");
       let isPlaying = false;
 
+      // Menonaktifkan scroll
       function disableScroll() {
         scrollTop = window.pageYOffset || document.documentElement.scrollTop;
         scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
@@ -648,19 +662,21 @@
         rootElement.style.scrollBehavior = "auto";
       }
 
+      // Mengaktifkan scroll dan memulai audio
       function enableScroll() {
         window.onscroll = function () {};
         rootElement.style.scrollBehavior = "smooth";
-        // localStorage.setItem("opened", "true");
         playAudio();
       }
+
+      // Memutar audio
       function playAudio() {
-        // song.volume = 0.1;
         audioIconWrapper.style.display = "flex";
         song.play();
         isPlaying = true;
       }
 
+      // Menangani klik pada ikon audio
       audioIconWrapper.onclick = function () {
         if (isPlaying) {
           song.pause();
@@ -675,37 +691,40 @@
         isPlaying = !isPlaying;
       };
 
-      // if (!localStorage.getItem("opened")) {
-      //   disableScroll();
-      // }
+      // Menonaktifkan scroll saat halaman dimuat
       disableScroll();
     </script>
+
+    <!-- Menangani Pengiriman Formulir -->
     <script>
       window.addEventListener("load", function () {
         const form = document.getElementById("my-form");
         form.addEventListener("submit", function (e) {
-          e.preventDefault();
-          const data = new FormData(form);
-          const action = e.target.action;
+          e.preventDefault(); // Mencegah pengiriman form default
+          const data = new FormData(form); // Mengambil data dari formulir
+          const action = e.target.action; // Mendapatkan URL untuk pengiriman formulir
           fetch(action, {
             method: "POST",
             body: data,
           }).then(() => {
-            alert("Konfirmasi Kehadiran Berhasil Terkirim!");
+            alert("Konfirmasi Kehadiran Berhasil Terkirim!"); // Menampilkan pesan setelah formulir dikirim
           });
         });
       });
     </script>
 
+    <!-- Menampilkan Nama dari URL dan Mengisi Input -->
     <script>
       const urlParams = new URLSearchParams(window.location.search);
-      const nama = urlParams.get("n") || "";
-      const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i";
+      const nama = urlParams.get("n") || ""; // Mengambil nama dari parameter URL
+      const pronoun = urlParams.get("p") || "Bapak/Ibu/Saudara/i"; // Mengambil kata ganti dari parameter URL
       const namaContainer = document.querySelector(".hero h4 span");
-      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ",");
+      namaContainer.innerText = `${pronoun} ${nama},`.replace(/ ,$/, ","); // Menampilkan nama dan kata ganti di elemen
 
-      document.querySelector("#nama").value = nama;
+      document.querySelector("#nama").value = nama; // Mengisi nilai input dengan nama
     </script>
+
+    <!-- Memuat bs5-lightbox dari CDN -->
     <script src="https://cdn.jsdelivr.net/npm/bs5-lightbox@1.8.3/dist/index.bundle.min.js"></script>
   </body>
 </html>

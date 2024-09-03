@@ -1,90 +1,100 @@
+/* Define CSS Custom Properties (Variables) */
 :root {
-  --pink: #f14e95;
-  --bg: #0a0a0a;
-  --shadow: 0 2px 2px rgb(0 0 0 / 0.5);
+  --pink: #f14e95; /* Pink color for accents */
+  --bg: #0a0a0a; /* Dark background color */
+  --shadow: 0 2px 2px rgb(0 0 0 / 0.5); /* Shadow effect */
 }
 
+/* Global styles */
 body {
-  font-size: 1.2rem;
-  font-family: "Work Sans", sans-serif;
-  min-height: 4000px;
+  font-size: 1.2rem; /* Base font size */
+  font-family: "Work Sans", sans-serif; /* Font family for the whole page */
+  min-height: 4000px; /* Minimum height of the body */
+}
+
+/* Hero section */
+.hero {
+  position: relative; /* Position relative for the absolute positioned pseudo-element */
+  min-height: 100vh; /* Full viewport height */
 }
 
 .hero::before {
-  content: "";
-  position: absolute;
+  content: ""; /* Empty content for the pseudo-element */
+  position: absolute; /* Absolute positioning */
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url(img/wedding.jpg);
-  background-size: cover;
-  background-position: center;
-  z-index: -1;
-  filter: grayscale();
+  background-image: url(img/wedding.jpg); /* Background image */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the background image */
+  z-index: -1; /* Place behind other content */
+  filter: grayscale(); /* Grayscale filter effect */
 }
 
 .hero h1,
 .hero h4,
-hero p {
-  text-shadow: var(--shadow);
-}
-
-.hero {
-  position: relative;
-  min-height: 100vh;
+.hero p {
+  text-shadow: var(--shadow); /* Apply shadow to text */
 }
 
 .hero h1 {
-  font-family: "Sacramento", cursive;
-  font-size: 6rem;
+  font-family: "Sacramento", cursive; /* Special font for main heading */
+  font-size: 6rem; /* Font size for main heading */
 }
 
 .hero h4 {
-  font-size: 1.6rem;
+  font-size: 1.6rem; /* Font size for sub-heading */
 }
 
 .hero p {
-  font-size: 1.4rem;
+  font-size: 1.4rem; /* Font size for paragraphs */
 }
 
 .hero a {
-  color: var(--pink);
-  background-color: white;
+  color: var(--pink); /* Link color */
+  background-color: white; /* Link background color */
 }
 
 .hero a:hover {
-  color: white;
-  background-color: var(--pink);
+  color: white; /* Link color on hover */
+  background-color: var(--pink); /* Link background color on hover */
 }
 
+/* Navbar styles */
 .mynavbar {
-  background-color: rgba(255, 255, 255, 0.3) !important;
-  backdrop-filter: blur(4px);
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.3
+  ) !important; /* Transparent background with white color */
+  backdrop-filter: blur(4px); /* Blur effect */
 }
 
 .mynavbar .offcanvas {
-  height: 100vh;
+  height: 100vh; /* Full viewport height for offcanvas menu */
 }
 
 .mynavbar .navbar-brand,
 .mynavbar .offcanvas-title {
-  font-family: "Sacramento", cursive;
-  font-size: 3.2rem;
-  font-weight: bol;
+  font-family: "Sacramento", cursive; /* Font for brand name and title */
+  font-size: 3.2rem; /* Font size */
+  font-weight: bold; /* Font weight */
 }
 
 .mynavbar .nav-link {
-  text-transform: uppercase;
+  text-transform: uppercase; /* Uppercase text for navigation links */
 }
 
+/* Home section */
 .home {
-  background-image: url(img/bg.png);
-  background-position: cover;
-  min-height: 100vh;
-  margin-top: -6rem;
-  padding-top: 15rem;
-  padding-bottom: 5rem;
+  background-image: url(img/bg.png); /* Background image */
+  background-position: cover; /* Cover the entire area */
+  min-height: 100vh; /* Full viewport height */
+  margin-top: -6rem; /* Negative margin to offset */
+  padding-top: 15rem; /* Padding from the top */
+  padding-bottom: 5rem; /* Padding from the bottom */
 }
 
 .home h2,
@@ -93,402 +103,408 @@ hero p {
 .gallery h2,
 .rsvp h2,
 .gifts h2 {
-  color: var(--pink);
-  font-family: "Sacramento";
-  font-size: 5rem;
-  font-weight: bold;
+  color: var(--pink); /* Heading color */
+  font-family: "Sacramento"; /* Font for headings */
+  font-size: 5rem; /* Font size for headings */
+  font-weight: bold; /* Font weight */
 }
 
 .home h3 {
-  color: #444;
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+  color: #444; /* Color for sub-headings */
+  font-size: 1.5rem; /* Font size */
+  margin-bottom: 1rem; /* Margin below the heading */
 }
 
 .home p {
-  font-size: 1.1rem;
-  color: #666;
+  font-size: 1.1rem; /* Font size for paragraphs */
+  color: #666; /* Text color */
 }
 
 .home .couple {
-  margin-top: 100px;
+  margin-top: 100px; /* Margin at the top */
 }
 
 .home .couple h3 {
-  font-family: "Sacramento";
-  font-size: 2.4rem;
-  color: var(--pink);
+  font-family: "Sacramento"; /* Font for couple's heading */
+  font-size: 2.4rem; /* Font size */
+  color: var(--pink); /* Heading color */
 }
 
 .home .couple img {
-  width: 100%;
+  width: 100%; /* Full width images */
 }
 
 .home .heart {
-  width: 50px;
-  height: 50px;
-  background-color: white;
-  display: flex;
-  border-radius: 50%;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%) translateY(65px);
+  width: 50px; /* Width of the heart icon */
+  height: 50px; /* Height of the heart icon */
+  background-color: white; /* Background color */
+  display: flex; /* Flexbox for centering */
+  border-radius: 50%; /* Circular shape */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5); /* Shadow effect */
+  position: absolute; /* Absolute positioning */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%) translateY(65px); /* Center and adjust vertical position */
 }
 
 .home .heart i {
-  margin: auto;
-  color: var(--pink);
+  margin: auto; /* Center the icon */
+  color: var(--pink); /* Icon color */
 }
 
+/* Info section */
 .info {
-  background-color: var(--bg);
-  color: white;
-  padding-top: 10rem;
-  padding-bottom: 8rem;
+  background-color: var(--bg); /* Background color */
+  color: white; /* Text color */
+  padding-top: 10rem; /* Padding from the top */
+  padding-bottom: 8rem; /* Padding from the bottom */
 }
 
 .info .alamat {
-  font-size: 1.1rem;
+  font-size: 1.1rem; /* Font size for alamat */
 }
 
 .info .description {
-  font-size: 1.2rem;
-  font-weight: 300;
+  font-size: 1.2rem; /* Font size for description */
+  font-weight: 300; /* Font weight */
 }
 
 .info .card {
-  background-color: rgba(255, 255, 255, 0.2) !important;
-  color: white !important;
-  border: 1px solid #999;
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.2
+  ) !important; /* Transparent background for cards */
+  color: white !important; /* Text color */
+  border: 1px solid #999; /* Border color */
 }
 
 .info .card-header {
-  border: 1px solid #999;
-  text-transform: uppercase;
-  letter-spacing: 0.1rem;
+  border: 1px solid #999; /* Border color */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 0.1rem; /* Letter spacing */
 }
 
 .info .card-body {
-  font-size: 1rem;
+  font-size: 1rem; /* Font size for card body */
 }
 
 .info .card-footer {
-  border-top: 1px solid #999;
-  font-size: 1rem;
-  font-weight: 0.9rem;
+  border-top: 1px solid #999; /* Top border color */
+  font-size: 1rem; /* Font size for card footer */
+  font-weight: 0.9rem; /* Font weight */
 }
 
+/* Story, Gallery, RSVP, Gifts sections */
 .story,
 .gallery,
 .rsvp,
 .gifts {
-  padding-top: 10rem;
-  padding-bottom: 8rem;
+  padding-top: 10rem; /* Padding from the top */
+  padding-bottom: 8rem; /* Padding from the bottom */
 }
 
 .story span,
 .gallery span,
 .gifts span {
-  text-transform: uppercase;
-  color: #666;
-  font-size: 0.9 rem;
-  letter-spacing: 1px;
-  display: block;
-  margin-bottom: 1rem;
+  text-transform: uppercase; /* Uppercase text */
+  color: #666; /* Text color */
+  font-size: 0.9rem; /* Font size */
+  letter-spacing: 1px; /* Letter spacing */
+  display: block; /* Block display */
+  margin-bottom: 1rem; /* Margin below the span */
 }
 
 .story p,
 .gallery p,
 .rsvp p,
 .gifts p {
-  font-size: 1rem;
-  font-weight: 300;
+  font-size: 1rem; /* Font size for paragraphs */
+  font-weight: 300; /* Font weight */
 }
 
+/* Timeline styles */
 .timeline {
-  list-style: none;
-  padding: 1.4rem 0;
-  margin-top: 1rem;
-  position: relative;
+  list-style: none; /* Remove default list style */
+  padding: 1.4rem 0; /* Padding */
+  margin-top: 1rem; /* Margin at the top */
+  position: relative; /* Relative positioning for pseudo-elements */
 }
 
 .timeline::before {
-  content: "";
+  content: ""; /* Empty content for pseudo-element */
   top: 0;
   bottom: 0;
-  position: absolute;
-  width: 1px;
-  background-color: #ccc;
-  left: 50%;
+  position: absolute; /* Absolute positioning */
+  width: 1px; /* Line width */
+  background-color: #ccc; /* Line color */
+  left: 50%; /* Center horizontally */
 }
 
 .timeline li {
-  margin-bottom: 1.5rem;
-  position: relative;
+  margin-bottom: 1.5rem; /* Margin below each timeline item */
+  position: relative; /* Relative positioning for pseudo-elements */
 }
 
 .timeline li::before,
 .timeline li::after {
-  content: "";
-  display: table;
+  content: ""; /* Empty content for pseudo-elements */
+  display: table; /* Table display for clearfix */
 }
 
 .timeline li::after {
-  clear: both;
+  clear: both; /* Clear floats */
 }
 
 .timeline li .timeline-image {
-  width: 160px;
-  height: 160px;
-  background-color: #ccc;
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  border-radius: 50%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 160px; /* Width of the timeline image */
+  height: 160px; /* Height of the timeline image */
+  background-color: #ccc; /* Background color */
+  position: absolute; /* Absolute positioning */
+  left: 50%; /* Center horizontally */
+  transform: translateX(-50%); /* Center horizontally */
+  border-radius: 50%; /* Circular shape */
+  background-size: cover; /* Cover the entire area */
+  background-position: center; /* Center the background image */
+  background-repeat: no-repeat; /* No repeat */
 }
 
 .timeline li .timeline-panel {
-  width: 40%;
-  float: left;
-  border: 1px solid #ccc;
-  padding: 2rem;
-  position: relative;
-  border-radius: 10px;
+  width: 40%; /* Width of the timeline panel */
+  float: left; /* Float left */
+  border: 1px solid #ccc; /* Border color */
+  padding: 2rem; /* Padding */
+  position: relative; /* Relative positioning */
+  border-radius: 10px; /* Rounded corners */
 }
 
 .timeline li .timeline-panel::before {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  /* width: 30px;
-  height: 30px;
-  background-color: #fff;
-  border: 1px solid #ccc;
-  right: -15px;
-  top: 70px;
-  transform: rotate(45deg);
-  z-index: -1; */
-
-  border-top: 15px solid transparent;
-  border-left: 15px solid #ccc;
-  border-right: 0 solid #ccc;
-  border-bottom: 15px solid transparent;
-  top: 80px;
-  right: -15px;
+  content: ""; /* Empty content for pseudo-element */
+  display: inline-block; /* Inline-block display */
+  position: absolute; /* Absolute positioning */
+  border-top: 15px solid transparent; /* Triangle effect */
+  border-left: 15px solid #ccc; /* Triangle color */
+  border-right: 0 solid #ccc; /* Triangle border-right */
+  border-bottom: 15px solid transparent; /* Triangle effect */
+  top: 80px; /* Position from the top */
+  right: -15px; /* Position from the right */
 }
 
 .timeline li .timeline-panel::after {
-  content: "";
-  position: absolute;
-  display: inline-block;
-  border-top: 14px solid transparent;
-  border-left: 14px solid #fff;
-  border-right: 0 solid #fff;
-  border-bottom: 15px solid transparent;
-  top: 81px;
-  right: -13px;
+  content: ""; /* Empty content for pseudo-element */
+  position: absolute; /* Absolute positioning */
+  display: inline-block; /* Inline-block display */
+  border-top: 14px solid transparent; /* Triangle effect */
+  border-left: 14px solid #fff; /* Triangle color */
+  border-right: 0 solid #fff; /* Triangle border-right */
+  border-bottom: 15px solid transparent; /* Triangle effect */
+  top: 81px; /* Position from the top */
+  right: -13px; /* Position from the right */
 }
 
 .timeline li.timeline-inverted .timeline-panel {
-  float: right;
+  float: right; /* Float right for inverted timeline */
 }
 
 .timeline li.timeline-inverted .timeline-panel::before {
-  border-left-width: 0;
-  border-right-width: 15px;
-  left: -15px;
-  right: auto;
+  border-left-width: 0; /* Remove left border for inverted timeline */
+  border-right-width: 15px; /* Right border width for inverted timeline */
+  left: -15px; /* Position from the left */
+  right: auto; /* Remove right positioning */
 }
 
 .timeline li.timeline-inverted .timeline-panel::after {
-  border-left-width: 0;
-  border-right-width: 14px;
-  left: -13px;
-  right: auto;
+  border-left-width: 0; /* Remove left border for inverted timeline */
+  border-right-width: 14px; /* Right border width for inverted timeline */
+  left: -13px; /* Position from the left */
+  right: auto; /* Remove right positioning */
 }
 
+/* Gallery section */
 .gallery {
-  background-color: #f5f5f5;
+  background-color: #f5f5f5; /* Light gray background */
 }
 
+/* RSVP section */
 .rsvp {
-  background-color: var(--bg);
+  background-color: var(--bg); /* Background color */
 }
 
 .rsvp h2 {
-  font-size: 4.5rem;
+  font-size: 4.5rem; /* Font size for RSVP heading */
 }
 
 .rsvp p {
-  color: white;
+  color: white; /* Text color */
 }
 
 .rsvp form label {
-  color: white;
+  color: white; /* Label color */
 }
 
 .rsvp button {
-  background-color: var(--pink);
-  color: white;
-  border: 1px solid var(--pink);
+  background-color: var(--pink); /* Button background color */
+  color: white; /* Button text color */
+  border: 1px solid var(--pink); /* Button border color */
 }
 
 .rsvp button:hover {
-  background-color: white;
-  color: pink;
-  border: 1px solid white;
+  background-color: white; /* Button background color on hover */
+  color: pink; /* Button text color on hover */
+  border: 1px solid white; /* Button border color on hover */
 }
 
+/* Footer styles */
 footer {
-  padding: 3rem;
-  background-color: var(--pink);
-  color: white;
+  padding: 3rem; /* Padding */
+  background-color: var(--pink); /* Background color */
+  color: white; /* Text color */
 }
 
 footer a {
-  color: var(--bg);
-  font-weight: bold;
-  text-decoration: none;
+  color: var(--bg); /* Link color */
+  font-weight: bold; /* Bold text */
+  text-decoration: none; /* Remove underline */
 }
 
 footer a:hover {
-  color: white;
+  color: white; /* Link color on hover */
 }
 
 footer li {
-  list-style: none;
-  display: inline;
-  margin: 0.5rem;
-  font-size: 1.5rem;
+  list-style: none; /* Remove list style */
+  display: inline; /* Inline display for list items */
+  margin: 0.5rem; /* Margin around list items */
+  font-size: 1.5rem; /* Font size for list items */
 }
 
+/* Audio icon wrapper */
 .audio-icon-wrapper {
-  width: 4rem;
-  height: 4rem;
-  font-size: 4rem;
-  position: fixed;
-  bottom: 2.5rem;
-  right: 2rem;
-  cursor: pointer;
-  color: white;
-  opacity: 0.5;
-  mix-blend-mode: difference;
-  animation: rotating 4s linear infinite;
-  transform-origin: center;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  line-height: 0;
+  width: 4rem; /* Width of the icon wrapper */
+  height: 4rem; /* Height of the icon wrapper */
+  font-size: 4rem; /* Font size for icon */
+  position: fixed; /* Fixed positioning */
+  bottom: 2.5rem; /* Position from the bottom */
+  right: 2rem; /* Position from the right */
+  cursor: pointer; /* Pointer cursor */
+  color: white; /* Icon color */
+  opacity: 0.5; /* Icon opacity */
+  mix-blend-mode: difference; /* Blend mode */
+  animation: rotating 4s linear infinite; /* Rotation animation */
+  transform-origin: center; /* Center of rotation */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  line-height: 0; /* Remove line height */
 }
 
 @keyframes rotating {
-  form {
-    transform: rotate(0);
+  from {
+    transform: rotate(0); /* Start rotation */
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(360deg); /* End rotation */
   }
 }
 
-/*Media Query*/
-/* Extra Large */
+/* Media Queries */
+
+/* Extra Large screens (larger than 1200px) */
 @media (max-width: 1200px) {
   .home .heart {
-    transform: translateX(-50%) translateY(45px);
+    transform: translateX(-50%) translateY(45px); /* Adjust vertical position */
   }
-} /*T
+}
 
-
-/*laptop*/
+/* Laptop screens (larger than 992px) */
 @media (max-width: 992px) {
   html {
-    font-size: 75%;
+    font-size: 75%; /* Adjust base font size */
   }
   .home .heart {
-    display: none;
+    display: none; /* Hide heart icon */
   }
 
   .timeline::before {
-    left: 60px;
+    left: 60px; /* Adjust line position */
   }
 
   .timeline li .timeline-image {
-    left: 15px;
-    margin-left: 45px;
-    top: 16px;
+    left: 15px; /* Adjust image position */
+    margin-left: 45px; /* Margin for image */
+    top: 16px; /* Adjust image position */
   }
 
   .timeline li .timeline-panel {
-    width: calc(100%-200px);
-    float: right;
+    width: calc(100%-200px); /* Adjust panel width */
+    float: right; /* Float right */
   }
 
   .timeline li .timeline-panel::before {
-    border-left-width: 0;
-    border-right-width: 15px;
-    left: -15px;
-    right: auto;
+    border-left-width: 0; /* Adjust border width */
+    border-right-width: 15px; /* Adjust border width */
+    left: -15px; /* Adjust position */
+    right: auto; /* Remove right positioning */
   }
 
   .timeline li .timeline-panel::after {
-    border-left-width: 0;
-    border-right-width: 14px;
-    left: -13px;
-    right: auto;
-  }
-} /*Tablet*/
-@media (max-width: 768px) {
-  html {
-    font-size: 65%;
-  }
-
-  .mynavbar .nav-link {
-    text-transform: uppercase;
-    font-size: 2rem;
-    text-align: center;
-  }
-
-  .sticky-top {
-    overflow: hidden;
-  }
-
-  .timeline li .timeline-image {
-    width: 140px;
-    height: 140px;
+    border-left-width: 0; /* Adjust border width */
+    border-right-width: 14px; /* Adjust border width */
+    left: -13px; /* Adjust position */
+    right: auto; /* Remove right positioning */
   }
 }
 
-/*Mobile Phone*/
-@media (max-width: 576px) {
+/* Tablet screens (larger than 768px) */
+@media (max-width: 768px) {
   html {
-    font-size: 60%;
+    font-size: 65%; /* Adjust base font size */
   }
 
-  .simply-countdown {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
+  .mynavbar .nav-link {
+    text-transform: uppercase; /* Uppercase text */
+    font-size: 2rem; /* Font size */
+    text-align: center; /* Center text */
+  }
+
+  .sticky-top {
+    overflow: hidden; /* Hide overflow */
   }
 
   .timeline li .timeline-image {
-    width: 80px;
-    height: 80px;
+    width: 140px; /* Adjust image width */
+    height: 140px; /* Adjust image height */
+  }
+}
+
+/* Mobile screens (larger than 576px) */
+@media (max-width: 576px) {
+  html {
+    font-size: 60%; /* Adjust base font size */
+  }
+
+  .simply-countdown {
+    display: flex; /* Flexbox layout */
+    flex-direction: row; /* Row direction */
+    flex-wrap: wrap; /* Wrap items */
+    justify-content: center; /* Center items */
+  }
+
+  .timeline li .timeline-image {
+    width: 80px; /* Adjust image width */
+    height: 80px; /* Adjust image height */
   }
 
   .timeline li .timeline-panel {
-    width: 65%;
-    transform: translateX(-20px);
+    width: 65%; /* Adjust panel width */
+    transform: translateX(-20px); /* Adjust horizontal position */
   }
 
   .timeline li .timeline-panel::before {
-    top: 30px;
+    top: 30px; /* Adjust position */
   }
-  timeline li .timeline-panel::after {
-    top: 31px;
+
+  .timeline li .timeline-panel::after {
+    top: 31px; /* Adjust position */
   }
 }
