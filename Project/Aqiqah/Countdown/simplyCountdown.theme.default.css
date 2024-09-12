@@ -37,3 +37,11 @@
   font-size: 0.75rem; /* Ukuran font untuk label */
   color: #666; /* Warna teks untuk label, sesuaikan dengan desain */
 }
+
+@media (max-width: 332px) {
+  .simply-countdown > .simply-section {
+    width: 50px; /* Sesuaikan ukuran sesuai kebutuhan */
+    height: 50px; /* Sesuaikan ukuran sesuai kebutuhan */
+    padding: 10px; /* Sesuaikan padding sesuai kebutuhan */
+  }
+}

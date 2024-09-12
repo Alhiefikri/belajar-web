@@ -59,3 +59,50 @@ namaContainer1.innerText = `${pronoun}`.replace(/ ,$/, "");
 namaContainer2.innerText = `${nama}`.replace(/ ,$/, ","); // Menampilkan nama dan kata ganti di elemen
 
 document.querySelector("#nama").value = nama; // Mengiis nilai input dengan nama
+
+// Animasi
+// script.js
+document
+  .getElementById("viewInvitation")
+  .addEventListener("click", function () {
+    const invitationSection = document.getElementById("hero");
+    const homeSection = document.getElementById("home");
+
+    // Tambahkan kelas animasi ke section undangan
+    invitationSection.classList.add("animate-out");
+
+    // Tambahkan kelas untuk mencegah scroll
+    document.body.classList.add("no-scroll");
+
+    // Tunggu animasi selesai, lalu sembunyikan section undangan dan tampilkan section home
+    setTimeout(() => {
+      // Sembunyikan section undangan sepenuhnya
+      invitationSection.style.display = "none";
+
+      // Tampilkan section home
+      homeSection.style.display = "block";
+      homeSection.classList.add("show");
+
+      // Gulir halaman ke atas
+      window.scrollTo(0, 0);
+
+      // Kembalikan scroll ke keadaan normal
+      document.body.classList.remove("no-scroll");
+    }, 1001); // Sesuaikan dengan durasi animasi
+  });
+
+// Menangani Pengiriman Formulir
+window.addEventListener("load", function () {
+  const form = document.getElementById("my-form");
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // Mencegah pengiriman form default
+    const data = new FormData(form); // mengambil data dari formulir
+    const action = e.target.action; // Mendapatkan URL untuk pengirim formuler
+    fetch(action, {
+      method: "POST",
+      body: data,
+    }).then(() => {
+      alert("Konfirmasi Kehadiran Berhasil Terkirim!"); // Menampilkan pesan setelah formulir dikirim
+    });
+  });
+});
