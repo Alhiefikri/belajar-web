@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge DOM</title>
+  </head>
+  <body>
+    <h1>TANTANGAN DOM</h1>
+
+    <input type="text" name="" id="inputText" />
+    <button id="addButton">Tambah Data</button>
+    <ul id="itemlist"></ul>
+
+    <script>
+      document
+        .getElementById("addButton")
+        .addEventListener("click", function () {
+          const inputText = document.getElementById("inputText").value;
+
+          if (inputText === "") return;
+
+          // membuat elemen li baru
+          const li = document.createElement("li");
+          li.textContent = inputText;
+
+          // Membuat tombol hapus
+          const deleteButon = document.createElement("button");
+          deleteButon.textContent = "Hapus";
+          deleteButon.addEventListener("click", function () {
+            li.remove();
+          });
+
+          // Menambahkan tombol hapus ke li
+          li.appendChild(deleteButon);
+
+          // Menambahkan li ke ul
+          document.getElementById("itemlist").appendChild(li);
+
+          // Mengosongkan input field
+          document.getElementById("inputText").value = "";
+        });
+    </script>
+  </body>
+</html>

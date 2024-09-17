@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>DOM MANIPULASI ELEMENT</title>
+    <style>
+      .bg-red {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <h1>Title</h1>
+      <p>ini Text</p>
+    </div>
+
+    <p id="paragraph">ini pagraph</p>
+    <ul>
+      <li>Ini item 1</li>
+      <li>Ini item 2</li>
+      <li>Ini item 3</li>
+    </ul>
+
+    <script>
+      // mengubah konten
+      // 1. element.textContent, biasanya untuk mengubah content saja
+      // const paragraph = document.getElementById("paragraph");
+      // console.log(paragraph);
+
+      // // 2. element.innerHTML, biasanya untuk mengubah dengan semua tagnya
+      // paragraph.textContent = "ini new paragraph";
+      // paragraph.innerHTML = "ini paragraph dengan innerHtml";
+      // const container = document.getElementById("container");
+      // container.innerHTML =
+      //   "<h1>Ini berubah menjadi content baru dengan tagname baru </h1>";
+
+      // Manipulasi Atribut
+      const paragraph = document.getElementById("paragraph");
+      // console.log(paragraph);
+      paragraph.setAttribute("class", "bg-red");
+
+      // manipulasi style
+      const li = document.querySelectorAll("li");
+      console.log(li);
+      li[2].style.fontSize = "32px";
+    </script>
+  </body>
+</html>

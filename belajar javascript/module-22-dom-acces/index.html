@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>DOM ACCES</title>
+  </head>
+  <body>
+    <h1 id="title">Hello World</h1>
+    <p class="text">ini paragraph</p>
+    <ul>
+      <li class="text">Item 3</li>
+      <li>Item 1</li>
+      <li>Item 2</li>
+    </ul>
+    <script>
+      // ⁡⁢⁣⁢getElementbyID⁡
+      const title = document.getElementById("title");
+      console.log(title);
+
+      // get ELementByClassName⁡
+      const text = document.getElementsByClassName("text");
+      console.log(text);
+
+      // ⁡⁢⁢⁢getElementByTagName⁡
+      const el = document.getElementsByTagName("li");
+      console.log(el[1]);
+
+      // ⁡⁣⁣⁢querySelector⁡
+      const element = document.querySelector("li"); //⁡⁢⁣⁡⁣⁣⁢hanya bisa mengambil yang pertam⁡⁣⁣⁢a⁡
+      console.log(element);
+
+      // ⁡⁢⁣⁣query Selector All⁡
+      const all = document.querySelectorAll("li.text");
+      console.log(all);
+    </script>
+  </body>
+</html>
