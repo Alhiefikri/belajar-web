@@ -1,0 +1,6 @@
+{
+  "firsName": "Alhie",
+  "lastName": "Fikri",
+  "address": { "country": "Indonesia", "city": "Banggai" },
+  "hobbies": ["Coding", "Game", "Traveling"]
+}
