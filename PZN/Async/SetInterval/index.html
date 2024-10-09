@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Mengatur karakter encoding menjadi UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Mengatur viewport untuk responsivitas -->
+    <title>Set Interval</title>
+    <!-- Judul halaman -->
+  </head>
+  <body>
+    <h1 id="header"></h1>
+    <!-- Elemen untuk menampilkan waktu -->
+    <script>
+      function setTime() {
+        const header = document.getElementById("header"); // Mengambil elemen dengan id 'header'
+        header.textContent = new Date().toString(); // Mengubah konten teks menjadi waktu saat ini
+      }
+
+      setInterval(setTime, 1000); // Memanggil fungsi setTime setiap 1000 milidetik (1 detik)
+      console.info("Program Selesai"); // Mencetak pesan ke konsol
+    </script>
+  </body>
+</html>

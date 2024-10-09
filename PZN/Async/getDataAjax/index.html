@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Mengatur karakter encoding menjadi UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Mengatur viewport untuk responsivitas -->
+    <title>Get Data Ajax</title>
+    <!-- Judul halaman -->
+  </head>
+  <body>
+    <h1 id="response"></h1>
+    <script>
+      const ajax = new XMLHttpRequest(); // Membuat objek XMLHttpRequest untuk melakukan permintaan
+      ajax.open("GET", "api/hello.json"); // Mengatur metode GET dan URL sumber data
+      ajax.addEventListener("load", function () {
+        const json = JSON.parse(ajax.responseText);
+
+        const header = document.getElementById("response");
+        header.textContent = json.response;
+      });
+      ajax.send(); // Mengirim permintaan ke server
+    </script>
+  </body>
+</html>

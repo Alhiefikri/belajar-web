@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- Mengatur karakter encoding menjadi UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Mengatur viewport untuk responsivitas -->
+    <title>AJAX</title>
+    <!-- Judul halaman -->
+  </head>
+  <body>
+    <script>
+      const ajax = new XMLHttpRequest(); // Membuat objek XMLHttpRequest untuk melakukan permintaan
+      ajax.open("GET", "api/hello.json"); // Mengatur metode GET dan URL sumber data
+      ajax.send(); // Mengirim permintaan ke server
+    </script>
+  </body>
+</html>
