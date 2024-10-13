@@ -5,6 +5,8 @@
 
 Proyek ini adalah pemutar audio sederhana yang memungkinkan pengguna untuk memutar, menjeda, dan mengelola playlist audio. Audio dapat diunggah dari perangkat dan disimpan di local storage untuk penggunaan selanjutnya.
 
+![Screenshot App](image.png)
+
 ## Struktur Kode
 
 ### 1. Mengambil Playlist dari Local Storage

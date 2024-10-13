@@ -4,6 +4,8 @@
 
 Quiz App adalah aplikasi interaktif yang dirancang untuk menguji pengetahuan dasar pengguna tentang pemrograman. Aplikasi ini memberikan pertanyaan dan opsi jawaban, memungkinkan pengguna untuk memilih jawaban dan mendapatkan umpan balik berdasarkan pilihan mereka. Dengan antarmuka yang sederhana, aplikasi ini bertujuan untuk membuat proses pembelajaran lebih menyenangkan.
 
+![Screenshot App](image.png)
+
 ## Cara Kerja Aplikasi
 
 1. **Pertanyaan dan Jawaban**: Aplikasi ini menyimpan array yang berisi pertanyaan dan jawaban. Setiap pertanyaan memiliki beberapa jawaban, di mana satu jawaban benar.

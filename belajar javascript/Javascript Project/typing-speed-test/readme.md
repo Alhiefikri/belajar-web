@@ -1,5 +1,7 @@
 # Proyek Typing Text
 
+![Screenshot Weather App](image.png)
+
 ## Deskripsi
 
 Proyek Typing Text adalah aplikasi web sederhana yang dirancang untuk menguji kemampuan mengetik pengguna. Aplikasi ini menampilkan teks yang harus diketik oleh pengguna dan memberikan umpan balik secara real-time tentang akurasi dan kecepatan mengetik dalam kata per menit (WPM).

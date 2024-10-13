@@ -1,5 +1,7 @@
 # README untuk Aplikasi Todo List
 
+![Screenshot Weather App](image.png)
+
 ## Deskripsi
 
 Aplikasi Todo List adalah alat sederhana untuk membantu pengguna mengelola tugas sehari-hari. Dengan aplikasi ini, pengguna dapat menambahkan, mengedit, dan menghapus tugas. Semua data tugas disimpan di local storage, sehingga tetap tersedia meskipun pengguna menutup atau merefresh halaman.

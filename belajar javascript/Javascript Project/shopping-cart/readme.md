@@ -1,5 +1,7 @@
 # README: Shopping Cart Project
 
+![Screenshot Weather App](image.png)
+
 ## Deskripsi Proyek
 
 Proyek ini adalah implementasi sederhana dari sistem keranjang belanja menggunakan JavaScript dengan pendekatan Object-Oriented Programming (OOP). Dalam proyek ini, kita membuat kelas untuk produk, item keranjang, dan keranjang belanja itu sendiri. Proyek ini memungkinkan pengguna untuk melihat produk, menambahkannya ke keranjang, dan mengelola item di dalamnya.

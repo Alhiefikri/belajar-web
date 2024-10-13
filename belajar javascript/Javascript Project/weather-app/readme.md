@@ -1,5 +1,7 @@
 # Weather App
 
+![Screenshot Weather App](image.png)
+
 ## Deskripsi
 
 Weather App adalah aplikasi web yang menampilkan informasi cuaca berdasarkan lokasi pengguna menggunakan API OpenWeather Map. Aplikasi ini memanfaatkan fitur geolokasi untuk mendapatkan koordinat pengguna dan menampilkan data cuaca yang relevan.
